@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { Provider } from "react-redux";
 
-import Header from "./components/Header";
+import App from "./components/App";
 import Post from "./components/Post";
 import Feed from "./components/Feed";
 
@@ -14,7 +14,7 @@ import css from "./styles/style.styl";
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Header}>
+      <Route path="/" component={App}>
         <IndexRoute component={Feed} />
         <Route path="/view/:postId" component={Post} />
       </Route>
