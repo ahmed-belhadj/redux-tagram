@@ -4,8 +4,8 @@ import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { Provider } from "react-redux";
 
 import App from "./components/App";
-import Post from "./components/Post";
 import Feed from "./components/Feed";
+import SelectedPost from "./components/SelectedPost";
 
 import store, { history } from "./store";
 
@@ -16,7 +16,7 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Feed} />
-        <Route path="/view/:postId" component={Post} />
+        <Route path="/view/:postId" component={SelectedPost} />
       </Route>
     </Router>
   </Provider>
