@@ -13,7 +13,7 @@ const SelectedPost = React.createClass({
     return (
       <div className="single-photo">
         <Post postId={postId} post={post} {...this.props} />
-        <Comments postComments={postComments} />
+        <Comments postComments={postComments} {...this.props} />
       </div>
     );
   }
