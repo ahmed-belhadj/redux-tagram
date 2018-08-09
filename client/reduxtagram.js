@@ -11,6 +11,16 @@ import store, { history } from "./store";
 
 import css from "./styles/style.styl";
 
+import Raven from "raven-js";
+import { sentry_url, logException } from "./data/config";
+
+Raven.config(sentry_url, {
+  tags: {
+    git_commit: "BADA55",
+    userLevel: "editor"
+  }
+}).install();
+
 const router = (
   <Provider store={store}>
     <Router history={history}>
